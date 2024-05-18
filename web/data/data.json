@@ -1,0 +1,31 @@
+{
+  "grades": [
+    "Directeur",
+    "Co Directeur",
+    "Chef de Service",
+    "Responsable Médecin",
+    "Responsable Ambulancier",
+    "Médecin",
+    "Chef Ambulancier",
+    "Interne",
+    "Ambulancier",
+    "Formation Médic",
+    "Formation Ambulancier",
+    "Stagiaire Suprême",
+    "Stagiaire"
+  ],
+  "vehicules": [
+    "Ambulance",
+    "Baller",
+    "Dodge",
+    "Hélicoptère"
+  ],
+  "status": [
+    "Libre",
+    "Occupé"
+  ],
+  "teams": [
+    "Direction",
+    "Accueil"
+  ]
+}

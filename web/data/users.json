@@ -1,0 +1,134 @@
+[
+  {
+    "username": "Cataleya Castellon",
+    "grade": "Directeur",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Nando Saviola",
+    "grade": "Co Directeur",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Tim Evans",
+    "grade": "Chef de Service",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Emiliana Watson",
+    "grade": "Médecin",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Duke Faust",
+    "grade": "Médecin",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Micheal Tilgrave",
+    "grade": "Médecin",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Nolan Harper",
+    "grade": "Médecin",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "John Hilts",
+    "grade": "Médecin",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Leeloo Thorne",
+    "grade": "Interne",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Samba Goma",
+    "grade": "Chef Ambulancier",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Joaquim Rodrigo",
+    "grade": "Chef Ambulancier",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Floyd Reyes",
+    "grade": "Ambulancier",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Jacob Rodriguez",
+    "grade": "Ambulancier",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Blake Warren",
+    "grade": "Ambulancier",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Dante",
+    "grade": "N/C",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Alex Mezio",
+    "grade": "Ambulancier",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Molly Latulipe",
+    "grade": "Interne",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Solal Snow",
+    "grade": "Ambulancier",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Kayna Ross",
+    "grade": "Interne",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Maria Gomes",
+    "grade": "Formation Médic",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Papii Ross",
+    "grade": "N/C",
+    "status": false,
+    "team": -1
+  },
+  {
+    "username": "Gwen O'connor",
+    "grade": "Stagiaire",
+    "status": false,
+    "team": -1
+  }
+]

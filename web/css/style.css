@@ -1,0 +1,818 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --main-blue:hsl(207, 93%, 28%);
+  --second-blue:hsl(201, 77%, 70%);
+  --main-red: darkred;
+  --second-red: red;
+  --main-orange: orangered;
+  --second_orange: orange;
+  --main-green: darkgreen;
+  --second-green: green;
+  --main-gray: gray;
+  --second-gray: lightgray;
+  --main-purple: purple;
+  --second-purple: plum;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: whitesmoke;
+}
+body .clickable {
+  cursor: pointer;
+}
+body .unclickable {
+  cursor: default;
+}
+body #login-header .login-logo {
+  position: relative;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 5%);
+  width: 50vw;
+  height: auto;
+}
+body header {
+  padding: 15px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+body header img {
+  width: 100px;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+body header img:hover {
+  filter: blur(0.3px) brightness(120%);
+}
+body header a {
+  text-decoration: none;
+  color: var(--main-blue);
+  transition: all 0.3s ease-in-out;
+}
+body header a:hover {
+  transform: scale(1.1);
+}
+body header span {
+  cursor: pointer;
+  color: var(--main-blue);
+  transition: all 0.3s ease-in-out;
+  padding-left: 15px;
+  padding-right: 15px;
+  right: 30px;
+  transform: rotate(90deg);
+}
+body header span:hover {
+  transform: scale(1.1) rotate(0deg);
+}
+body #login {
+  margin-top: 5vh;
+  position: relative;
+  left: 50%;
+  top: 10%;
+  width: 20vw;
+  transform: translate(-50%, 10%);
+  background-color: var(--main-blue);
+  border-radius: 10px;
+  color: whitesmoke;
+  padding: 10px;
+  box-shadow: 0px 11px 20px 0px gray;
+}
+body #login div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 5px;
+}
+body #login div label {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+body #login div input {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--second-blue);
+  color: hsl(207, 93%, 28%);
+}
+body #login div input:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: brightness(120%);
+}
+body #login div input:focus {
+  border: 2px solid var(--second-blue);
+  transform: scale(1.1);
+}
+body #login div input::-moz-placeholder {
+  color: hsla(207, 93%, 28%, 0.5);
+}
+body #login div input::placeholder {
+  color: hsla(207, 93%, 28%, 0.5);
+}
+body #login .remember-me {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body #login button {
+  margin-top: 3vh;
+  margin-bottom: 15px;
+  outline: none;
+  border: none;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 5px;
+  border-radius: 5px;
+  width: 10vw;
+  background-color: var(--second-blue);
+  color: var(--main-blue);
+  transition: all 0.3s ease-in-out;
+}
+body #login button:hover {
+  cursor: pointer;
+  transform: translate(-50%) scale(1.1);
+}
+body #users_table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  width: 99%;
+  transform: translate(-50%);
+  transition: all 0.3s ease;
+}
+body #users_table thead {
+  background-color: var(--main-blue);
+  color: whitesmoke;
+  font-weight: bolder;
+  border: 3px solid var(--main-blue);
+}
+body #users_table thead tr th:nth-child(3) {
+  text-align: center;
+}
+body #users_table thead tr th:nth-child(3) button {
+  margin-left: 10%;
+}
+body #users_table thead tr th:nth-child(4) {
+  text-align: center;
+}
+body #users_table thead tr th:nth-child(4) button {
+  margin-left: 10%;
+}
+body #users_table thead tr button {
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  outline: unset;
+  border: unset;
+  padding: 5px;
+  background-color: var(--main-blue);
+  color: var(--second-blue);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+body #users_table thead tr button:hover {
+  background-color: var(--second-blue);
+  color: var(--main-blue);
+  transform: scale(1.1);
+  filter: brightness(120%);
+  box-shadow: 0px 0px 5px 0px white;
+}
+body #users_table tbody {
+  border: 3px solid var(--main-blue);
+}
+body #users_table tbody tr,
+body #users_table tbody .inactiv {
+  background-color: var(--main-gray);
+  color: var(--second-gray);
+}
+body #users_table tbody tr input,
+body #users_table tbody tr select,
+body #users_table tbody tr span,
+body #users_table tbody .inactiv input,
+body #users_table tbody .inactiv select,
+body #users_table tbody .inactiv span {
+  cursor: pointer;
+}
+body #users_table tbody .activ {
+  background-color: var(--second-blue);
+  color: var(--main-blue);
+}
+body #users_table tbody .direction {
+  background-color: var(--main-purple);
+  color: var(--second-gray);
+}
+body #users_table tbody .reception {
+  background-color: var(--main-green);
+  color: var(--second-gray);
+}
+body #users_table tbody input {
+  outline: none;
+  border: 1px solid var(--second-blue);
+  padding: 5px;
+}
+body #users_table tbody select {
+  outline: none;
+  border: 1px solid var(--second-blue);
+  padding: 5px;
+}
+body #users_table tbody select option {
+  background-color: var(--main-blue);
+  color: var(--second-blue);
+}
+body #users_table tbody .add-user {
+  display: flex;
+  flex-grow: 1;
+  background-color: var(--main-blue);
+  color: var(--second-blue);
+  justify-content: center;
+  align-items: center;
+}
+body #users_table tbody .add-user button {
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  outline: unset;
+  border: unset;
+  padding: 5px;
+  background-color: var(--main-blue);
+  color: var(--second-blue);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+body #users_table tbody .add-user button:hover {
+  background-color: var(--second-blue);
+  color: var(--main-blue);
+  transform: scale(1.1);
+  filter: brightness(120%);
+  box-shadow: 0px 0px 5px 0px white;
+}
+body #home_div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  position: relative;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%);
+}
+body #home_div .team-reception {
+  width: 40%;
+  padding: 30px;
+  background-color: var(--main-green);
+  color: whitesmoke;
+  border-radius: 15px;
+  box-shadow: 3px 8px 20px 0px var(--main-gray);
+}
+body #home_div .team-reception h1 {
+  text-align: center;
+}
+body #home_div .team-reception div {
+  background-color: var(--second-green);
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  transition: all 0.2s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+body #home_div .team-reception div div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #home_div .team-reception div div label {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #home_div .team-reception div div input {
+  visibility: hidden;
+}
+body #home_div .team-reception .reception-unavailable {
+  background-color: var(--second-red);
+}
+body #home_div .team-direction {
+  width: 40%;
+  padding: 30px;
+  background-color: var(--main-purple);
+  color: whitesmoke;
+  border-radius: 15px;
+  box-shadow: 3px 8px 20px 0px var(--main-gray);
+}
+body #home_div .team-direction h1 {
+  text-align: center;
+}
+body #home_div .team-direction div {
+  background-color: var(--second-purple);
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  transition: all 0.2s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+body #home_div .team-direction div div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #home_div .team-direction div div label {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #home_div .team-direction div div input {
+  visibility: hidden;
+}
+body #home_div .team-direction .reception-unavailable {
+  background-color: var(--second-red);
+}
+body #teams {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 30px;
+  padding: 30px;
+  margin-bottom: 25px;
+}
+body #teams div {
+  padding: 10px;
+  color: whitesmoke;
+  margin-bottom: 1vh;
+  border-radius: 10px;
+  box-shadow: 3px 8px 20px 0px darkgray;
+}
+body #teams div h1 {
+  text-align: center;
+}
+body #teams div #close_team {
+  position: relative;
+  right: -85%;
+  top: -14%;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+}
+body #teams div #close_team:hover {
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+body #teams div div {
+  border-radius: none;
+  box-shadow: none;
+}
+body #teams div div #cancel_team_change {
+  color: black;
+}
+body #teams div #team_users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #teams div #team_users p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+body #teams div #team_users p #cancel_team_change {
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+  color: whitesmoke;
+}
+body #teams div #team_users p #cancel_team_change:hover {
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+body #teams div #team_users p select {
+  outline: none;
+  border: 1px solid var(--second-blue);
+  padding: 5px;
+}
+body .available {
+  background-color: var(--main-blue);
+}
+body .available div {
+  background-color: var(--second-blue);
+}
+body .available p {
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  background-color: var(--second-blue);
+  cursor: pointer;
+}
+body .available select option {
+  background-color: var(--main-blue);
+  color: var(--second-blue);
+}
+body .unavailable {
+  background-color: var(--main-red);
+}
+body .unavailable div {
+  background-color: var(--second-red);
+}
+body .unavailable p {
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  background-color: var(--second-red);
+  cursor: pointer;
+}
+body .unavailable select option {
+  background-color: var(--main-red);
+  color: var(--second-red);
+}
+body .undefined-status {
+  background-color: var(--main-orange);
+}
+body .undefined-status div {
+  background-color: var(--second_orange);
+}
+body .undefined-status p {
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  background-color: var(--second_orange);
+  cursor: pointer;
+}
+body .undefined-status select option {
+  background-color: var(--main-orange);
+  color: white;
+}
+body .modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: auto;
+  max-height: calc(100vh - 50px);
+  background-color: var(--main-gray);
+  color: var(--second-gray);
+  padding-left: 15px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px var(--main-gray);
+  z-index: 999;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+body .modal::-webkit-scrollbar {
+  visibility: hidden;
+}
+body .modal .modal-header {
+  border-bottom: 2px solid var(--second-gray);
+  position: sticky;
+  width: 105%;
+  background-color: var(--main-gray);
+  z-index: 555;
+  top: 0;
+}
+body .modal .modal-header h1 {
+  text-align: center;
+  color: whitesmoke;
+}
+body .modal .modal-header span {
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  font-size: xx-large;
+  font-weight: bolder;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-45deg);
+}
+body .modal .modal-header span:hover {
+  cursor: pointer;
+  transform: scale(1.1) rotate(180deg);
+}
+body .modal .modal-body {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  grid-template-columns: auto;
+  justify-content: space-between;
+}
+body .modal .modal-body #modal_grades,
+body .modal .modal-body #modal_vehicules,
+body .modal .modal-body #modal_status,
+body .modal .modal-body #modal_teams {
+  padding: 10px;
+}
+body .modal .modal-body #modal_grades div,
+body .modal .modal-body #modal_vehicules div,
+body .modal .modal-body #modal_status div,
+body .modal .modal-body #modal_teams div {
+  text-align: center;
+  color: whitesmoke;
+}
+body .modal .modal-body #modal_grades .modal-grades,
+body .modal .modal-body #modal_grades .modal-vehicules,
+body .modal .modal-body #modal_grades .modal-status,
+body .modal .modal-body #modal_grades .modal-teams,
+body .modal .modal-body #modal_vehicules .modal-grades,
+body .modal .modal-body #modal_vehicules .modal-vehicules,
+body .modal .modal-body #modal_vehicules .modal-status,
+body .modal .modal-body #modal_vehicules .modal-teams,
+body .modal .modal-body #modal_status .modal-grades,
+body .modal .modal-body #modal_status .modal-vehicules,
+body .modal .modal-body #modal_status .modal-status,
+body .modal .modal-body #modal_status .modal-teams,
+body .modal .modal-body #modal_teams .modal-grades,
+body .modal .modal-body #modal_teams .modal-vehicules,
+body .modal .modal-body #modal_teams .modal-status,
+body .modal .modal-body #modal_teams .modal-teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  text-align: justify;
+  color: var(--second-gray);
+}
+body .modal .modal-body #modal_grades .modal-grades p,
+body .modal .modal-body #modal_grades .modal-vehicules p,
+body .modal .modal-body #modal_grades .modal-status p,
+body .modal .modal-body #modal_grades .modal-teams p,
+body .modal .modal-body #modal_vehicules .modal-grades p,
+body .modal .modal-body #modal_vehicules .modal-vehicules p,
+body .modal .modal-body #modal_vehicules .modal-status p,
+body .modal .modal-body #modal_vehicules .modal-teams p,
+body .modal .modal-body #modal_status .modal-grades p,
+body .modal .modal-body #modal_status .modal-vehicules p,
+body .modal .modal-body #modal_status .modal-status p,
+body .modal .modal-body #modal_status .modal-teams p,
+body .modal .modal-body #modal_teams .modal-grades p,
+body .modal .modal-body #modal_teams .modal-vehicules p,
+body .modal .modal-body #modal_teams .modal-status p,
+body .modal .modal-body #modal_teams .modal-teams p {
+  transition: all 0.3s ease-in-out;
+}
+body .modal .modal-body #modal_grades .modal-grades p:hover,
+body .modal .modal-body #modal_grades .modal-vehicules p:hover,
+body .modal .modal-body #modal_grades .modal-status p:hover,
+body .modal .modal-body #modal_grades .modal-teams p:hover,
+body .modal .modal-body #modal_vehicules .modal-grades p:hover,
+body .modal .modal-body #modal_vehicules .modal-vehicules p:hover,
+body .modal .modal-body #modal_vehicules .modal-status p:hover,
+body .modal .modal-body #modal_vehicules .modal-teams p:hover,
+body .modal .modal-body #modal_status .modal-grades p:hover,
+body .modal .modal-body #modal_status .modal-vehicules p:hover,
+body .modal .modal-body #modal_status .modal-status p:hover,
+body .modal .modal-body #modal_status .modal-teams p:hover,
+body .modal .modal-body #modal_teams .modal-grades p:hover,
+body .modal .modal-body #modal_teams .modal-vehicules p:hover,
+body .modal .modal-body #modal_teams .modal-status p:hover,
+body .modal .modal-body #modal_teams .modal-teams p:hover {
+  cursor: pointer;
+}
+body .modal .modal-body #modal_grades .modal-grades span,
+body .modal .modal-body #modal_grades .modal-vehicules span,
+body .modal .modal-body #modal_grades .modal-status span,
+body .modal .modal-body #modal_grades .modal-teams span,
+body .modal .modal-body #modal_vehicules .modal-grades span,
+body .modal .modal-body #modal_vehicules .modal-vehicules span,
+body .modal .modal-body #modal_vehicules .modal-status span,
+body .modal .modal-body #modal_vehicules .modal-teams span,
+body .modal .modal-body #modal_status .modal-grades span,
+body .modal .modal-body #modal_status .modal-vehicules span,
+body .modal .modal-body #modal_status .modal-status span,
+body .modal .modal-body #modal_status .modal-teams span,
+body .modal .modal-body #modal_teams .modal-grades span,
+body .modal .modal-body #modal_teams .modal-vehicules span,
+body .modal .modal-body #modal_teams .modal-status span,
+body .modal .modal-body #modal_teams .modal-teams span {
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-in-out;
+}
+body .modal .modal-body #modal_grades .modal-grades span:hover,
+body .modal .modal-body #modal_grades .modal-vehicules span:hover,
+body .modal .modal-body #modal_grades .modal-status span:hover,
+body .modal .modal-body #modal_grades .modal-teams span:hover,
+body .modal .modal-body #modal_vehicules .modal-grades span:hover,
+body .modal .modal-body #modal_vehicules .modal-vehicules span:hover,
+body .modal .modal-body #modal_vehicules .modal-status span:hover,
+body .modal .modal-body #modal_vehicules .modal-teams span:hover,
+body .modal .modal-body #modal_status .modal-grades span:hover,
+body .modal .modal-body #modal_status .modal-vehicules span:hover,
+body .modal .modal-body #modal_status .modal-status span:hover,
+body .modal .modal-body #modal_status .modal-teams span:hover,
+body .modal .modal-body #modal_teams .modal-grades span:hover,
+body .modal .modal-body #modal_teams .modal-vehicules span:hover,
+body .modal .modal-body #modal_teams .modal-status span:hover,
+body .modal .modal-body #modal_teams .modal-teams span:hover {
+  cursor: pointer;
+  transform: rotate(0deg);
+}
+body .modal .modal-body #modal_grades .modal-grades input,
+body .modal .modal-body #modal_grades .modal-vehicules input,
+body .modal .modal-body #modal_grades .modal-status input,
+body .modal .modal-body #modal_grades .modal-teams input,
+body .modal .modal-body #modal_vehicules .modal-grades input,
+body .modal .modal-body #modal_vehicules .modal-vehicules input,
+body .modal .modal-body #modal_vehicules .modal-status input,
+body .modal .modal-body #modal_vehicules .modal-teams input,
+body .modal .modal-body #modal_status .modal-grades input,
+body .modal .modal-body #modal_status .modal-vehicules input,
+body .modal .modal-body #modal_status .modal-status input,
+body .modal .modal-body #modal_status .modal-teams input,
+body .modal .modal-body #modal_teams .modal-grades input,
+body .modal .modal-body #modal_teams .modal-vehicules input,
+body .modal .modal-body #modal_teams .modal-status input,
+body .modal .modal-body #modal_teams .modal-teams input {
+  left: 0%;
+  outline: none;
+  border: 1px solid var(--second-blue);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--second-gray);
+  color: black;
+  filter: brightness(120%);
+}
+body .modal .modal-body #modal_grades input,
+body .modal .modal-body #modal_vehicules input,
+body .modal .modal-body #modal_status input,
+body .modal .modal-body #modal_teams input {
+  position: relative;
+  left: -22%;
+  outline: none;
+  border: 1px solid var(--second-blue);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--second-gray);
+  color: black;
+  filter: brightness(120%);
+}
+body .modal .modal-body #modal_grades button,
+body .modal .modal-body #modal_vehicules button,
+body .modal .modal-body #modal_status button,
+body .modal .modal-body #modal_teams button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 5px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--second-gray);
+  font-size: medium;
+  transition: all 0.3s ease-in-out;
+}
+body .modal .modal-body #modal_grades button:hover,
+body .modal .modal-body #modal_vehicules button:hover,
+body .modal .modal-body #modal_status button:hover,
+body .modal .modal-body #modal_teams button:hover {
+  background-color: var(--second-gray);
+  color: black;
+  border-radius: 5px;
+  filter: brightness(120%);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+body .modal .modal-body #modal-vehicules div {
+  color: whitesmoke;
+  text-align: center;
+}
+body .modal .modal-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 2px solid var(--second-gray);
+}
+body .modal .modal-footer button {
+  margin-top: 15px;
+  outline: none;
+  border: none;
+  padding: 5px;
+  width: 20%;
+  font-size: x-large;
+  background-color: transparent;
+  color: var(--second-gray);
+  transition: all 0.3s ease-in-out;
+}
+body .modal .modal-footer button:hover {
+  cursor: pointer;
+  background-color: var(--second-gray);
+  color: black;
+  border-radius: 5px;
+  filter: brightness(120%);
+  transform: scale(1.1);
+}
+body footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: var(--main-blue);
+  min-height: 50px;
+  margin-top: 150%;
+}
+body footer span {
+  position: relative;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: var(--second-blue);
+  text-decoration: none;
+  text-align: center;
+  transform: translateY(50%);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+body footer span:hover {
+  color: whitesmoke;
+  transform: translate(0, 50%) scale(1.3);
+}
+body .contact-us {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  color: whitesmoke;
+  background-color: transparent;
+  text-align: center;
+  padding: 20px;
+}
+body .contact-us div {
+  position: absolute;
+  background-color: var(--main-blue);
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 15vh;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+body .contact-us div span {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  padding: 10px;
+  z-index: 999;
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+body .contact-us div span:hover {
+  transform: rotate(0deg);
+}
+body .contact-us div div p a {
+  text-decoration: none;
+  color: var(--second-blue);
+  transition: all 0.3s ease-in-out;
+}
+body .contact-us div div p a:hover {
+  text-decoration: none;
+  color: whitesmoke;
+}
+body .contact-us::after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}/*# sourceMappingURL=style.css.map */
