@@ -17,5 +17,3 @@ Create users_loggin.json =>
 
 
 Feel free to use and modify like you want to fit with your needs ! 
-You can contact me :
-Discord => pastequemure 
