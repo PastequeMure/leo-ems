@@ -113,6 +113,6 @@ function ContactFooter(event) {
                     secondP.appendChild(discord_link);
 
                 const thirdP = document.createElement('p');
-                thirdP.innerText = "- OdysKyZ : Harcelez le 😏";
+                thirdP.innerText = "- OdysKyZz : Harcelez le 😏";
                 paragraph.appendChild(thirdP);
 }
