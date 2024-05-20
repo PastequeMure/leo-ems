@@ -176,6 +176,30 @@ app.post('/update_team', (req,res) => {
     //checkTeams()
 })
 
+app.post('/update_team_status', (req,res) => {
+    const {username,grade,status} = req.body;
+    const usersData = JSON.parse(fs.readFileSync('./web/data/users.json'));
+    let findUser = usersData.find(user => user.username === username && user.grade === grade);
+
+    let updateData = {
+        username:findUser.username,
+        grade:findUser.grade,
+        status:findUser.status,
+        team:findUser.team,
+        team_status:status
+    }
+
+    let findIndex = usersData.findIndex(user => user.username && user.grade === grade);
+    usersData[findIndex] = updateData;
+    try {
+        fs.writeFileSync('./web/data/users.json', JSON.stringify(usersData,null,2))
+        res.status(200).send('team_status_updated')
+    } catch(error) {
+        res.status(400).send('team_status_not_updated');
+        console.error(error)
+    }
+})
+
 app.post('/add_user', (req,res) => {
     const {username,grade,status,team} = req.body;
     const usersData = JSON.parse(fs.readFileSync('./web/data/users.json'));
