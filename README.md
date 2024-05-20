@@ -19,3 +19,6 @@ Create in ./web/data/ :  users_loggin.json =>
 Feel free to use and modify like you want to fit with your needs ! 
 
 Use to do a team dispatch 
+Role Play medic for exemple
+
+Can be used at any dispatch type
